@@ -1,0 +1,15 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore contents of data/, but keep the folder
+data/*
+!data/.gitkeep
+
+# Ignore contents of osm_cache/, but keep the folder
+osm_cache/*
+!osm_cache/.gitkeep
+
+*.log
+.env

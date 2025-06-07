@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    restart: always
+    environment:
+      POSTGRES_DB: geo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: ./app
+    depends_on:
+      - db
+    volumes:
+      - ./app:/app
+      - ./osm_cache:/app/osm_cache
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:example@db:5432/geo
+    command: ["bash", "entrypoint.sh"]
+
+volumes:
+  pgdata:
