@@ -53,7 +53,6 @@ PBF_URL = "https://download.geofabrik.de/europe/germany/nordrhein-westfalen-late
 ```bash
 docker-compose up --build
 ```
-
 This will:
 - Create the PostgreSQL + PostGIS database
 - Run create_tables.py
