@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "🔧 Running DB setup..."
+echo "Running DB setup..."
 python create_tables.py
 
 echo "Running import_data.py..."

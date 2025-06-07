@@ -61,12 +61,12 @@ This will:
 - Extract OSM road edges
 - Map-match GPS to edges
 - Start the FastAPI server on http://localhost:8000
-- you can also connect to pgadmin locally using port: 5433 and host: 127.0.0.1 / localhost
+- you can also connect to pgadmin locally using port: 5433 ( as mapped in docker) and host: 127.0.0.1 / localhost
 
 ### List of available endpoints: 
 
 - http://localhost:8000/upload/
-- http://localhost:8000/matched-lines/{recording_id} (recording_id:which you a get as a result of the upload endpoint)
+- http://localhost:8000/matched-lines/{recording_id} (recording_id: which you a get as a result of the upload endpoint)
 
 
 ## 🚀 API Usage
