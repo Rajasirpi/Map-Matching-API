@@ -1,6 +1,6 @@
 # 🗺️ GPS Map Matching API with FastAPI + PostGIS + Pyrosm
 
-This project provides a complete backend pipeline for uploading GPS tracks (in GeoJSON format), matching them to road network edges using OpenStreetMap (OSM), and exposing the results via an API. It uses **FastAPI**, **PostgreSQL + PostGIS**, and **Pyrosm** for edge extraction, along with a **simple map-matching algorithm** based on nearest-edge logic.
+This project provides a complete backend pipeline for uploading GPS tracks (in GeoJSON format), matching them to road network edges using OpenStreetMap (OSM), and exposing the results via an API. It uses **FastAPI**, **PostgreSQL + PostGIS**, and **Pyrosm** for edge extraction, along with a **simple map-matching algorithm** based on nearest-edge logic. This project is fully Dockerized — no need to install Python or PostGIS locally. Everything runs in isolated containers via docker-compose.
 
 
 ## 📁 Project Structure
@@ -15,8 +15,8 @@ This project provides a complete backend pipeline for uploading GPS tracks (in G
     - create_tables.py - PostgreSQL schema setup
     - entrypoint.sh - Docker entrypoint to initialize and run app
     - requirements.txt - Python dependencies
-- data/ - Place your .geojson GPS files here
-- osm_cache/ - Cached OSM PBF files
+- data/ - Create and Place your .geojson GPS files here
+- osm_cache/ - create an empty folder and it will Cache OSM PBF files here
 - docker-compose.yml
 - README.md
 
